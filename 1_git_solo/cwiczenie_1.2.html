@@ -15,19 +15,31 @@
             Chcesz więc zabezpieczyć aktualny stan projektu, żeby ewentualnie do niego wrócić i zacząć inny
             eksperyment.
         </p>
-        <img style="width: 300px" src="https://cdn-images-1.medium.com/max/1200/1*70aOJ1osE9C8cVZUkmH95g.png" />
-        <p>Użyj repozytorium z poprzedniego ćwiczenia. Stwórz jeszcze jeden komit, tak, żeby mieć co najmniej 2.</p>
+        <img style="height: 150px" src="https://cdn-images-1.medium.com/max/1200/1*70aOJ1osE9C8cVZUkmH95g.png" />
+        <p>Użyj repozytorium z poprzedniego ćwiczenia.</p>
+
         <div class="piece">
             <div class="git">
-                <pre><code>$ git status
-On branch master
-Your branch is up to date with 'origin/master'.
+                <pre><code>$ git add .
 
-nothing to commit, working tree clean</code></pre>
+$ git commit -m "Drugi commit"
+
+$ git push origin master</code></pre>
             </div>
-            <p>Upewnij się, że jesteś na czysto.</p>
+            <p>Stwórz jeszcze jeden komit, tak, żeby mieć co najmniej 2. Dodaj nowy plik z dowolną treścią, następnie <span class="command">git add .</span>,  
+                <span class="command">git commit</span> i <span class="command">git push</span>, tym razem już bez przełącznika <span class="command">-u</span>.</p>
         </div>
-        <div class="clear"></div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git log --oneline
+3f3e187 (HEAD -> master, origin/master) Drugi commit
+13bb5ed Iniszial komit mesydż</code></pre>
+            </div>
+            <p>Historię możesz podejrzeć poleceniem <span class="command">git log</span> 
+                z przełęcznikiem <span class="command">--oneline</span> jeśli chcesz tylko skróconą wersję.</p>
+        </div>
+        
 
 
         <div class="piece">
