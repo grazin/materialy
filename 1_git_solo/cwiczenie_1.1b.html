@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+</head>
+
+<body>
+    <div class="content">
+        <p class="plot">
+            Rozpocząłeś/rozpoczęłaś już pracę nad dużym samodzielnym projektem. Chcesz, żeby twoja praca była
+            bezpieczna i chcesz
+            eksplorować różne podejścia do tematu.
+        </p>
+        <img style="height: 150px" src="https://cdn-images-1.medium.com/max/1200/1*70aOJ1osE9C8cVZUkmH95g.png" />
+        <p></p>
+
+        <div class="piece">
+            <div class="img">
+                <img src="git bash.png" />
+            </div>
+            <p>Zacznij od utworzenia folderu z projektem z paroma plikami/folderami. Następnie otwórz konsolę git bash
+                w folerze tego projektu
+            </p>
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git init
+Initialized empty Git repository in //Documents/Politechnika - Git/repo-testy/moj projekt/.git/</code></pre>
+
+            </div>
+            <p>Zainicjuj repozytorium poleceniem <span class="command">git init</span>.</p>
+
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+    (use "git add &lt;file&gt;..." to include in what will be committed)
+
+<span class="untracked">readme.txt</span>
+<span class="untracked">src/</span>
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+
+            </div>
+            <p>Teraz sprawdź status swojego nowego repozytorium poleceniem <span class="command">git status</span>.</p>
+
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git add .
+            
+$ git status
+On branch master
+Changes to be committed:
+    (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+<span class="changes-staged">new file:   readme.txt</span>
+<span class="changes-staged">new file:   src/siala baba mak.txt</span></code></pre>
+            </div>
+            <p>Dodaj zmiany do indeksu poleceniem <span class="command">add .</span> i sprawdź ponownie status.
+            </p>
+
+        </div>
+
+        <div class="piece">
+                <div class="git">
+                    <pre><code>$ git commit -m "Start projektu"
+[master (root-commit) b3a6c5b] Start projektu
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.txt
+ create mode 100644 src/siala baba mak.txt
+                           
+$ git status
+On branch master
+nothing to commit, working tree clean</code></pre>
+                </div>
+                <p>Zakomituj teraz zmiany z dowolnym mesydżem. Sprawdź ponownie status.
+                </p>
+    
+            </div>
+
+
+        <div class="piece">
+            <div class="img">
+                <img src="create-new-repo.png" />
+            </div>
+            <p>Póki co, twoje repozytorium istnieje tylko lokalnie. 
+                Stwórz nowe publiczne repozytorium: <a href="https://github.com/new" target="_blank">github.com/new</a>, żeby spiąć je ze swoim lokalnym.
+            </p>
+        </div>
+
+        <div class="piece">
+            <div class="img">
+                <img src="copy.ssh.png" />
+            </div>
+            <p>Przejdź na nowo utworzone repozytorium i skopiuj url SSH.</p>
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git remote add origin git@github.com:grazin/repo2.git</code></pre>
+
+            </div>
+            <p>Wróć do git basha i zepnij swoje repozytorium z originem z GitHuba.</p>
+
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 324 bytes | 14.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/grazin/repo2/pull/new/master
+remote:
+To github.com:grazin/repo2.git
+    * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean</code></pre>
+            </div>
+            <p>Teraz pusznij zmiany do origina (czyli do GitHuba).
+                Ponieważ to pierwszy komit na tym branczu, użyj przełącznika <span class="command">-u</span>. Następnie
+                znów odczytaj status.
+            </p>
+        </div>
+
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git log
+<span class="message">commit 13bb5ed835a5832d752d9f00e74a4732f5a8382c</span> (HEAD -> master, origin/master)
+Author: IZABELA SZCZEPANIK &lt;izabela.szczepanik@ing.com&gt;
+Date:   Tue Nov 27 14:28:32 2018 +0100
+
+    Start projektu</code></pre>
+            </div>
+            <p>Na koniec podejrzyj historię. Użyj polecenia <span class="command">git log</span>, zobacz także log w
+                dowolnym GUI.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
