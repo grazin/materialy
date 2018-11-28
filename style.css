@@ -24,10 +24,10 @@ pre {
     margin: 0;
 }
 
-.untracked, .changes-not-staged {
+.untracked, .changes-not-staged, .red {
     color: red;
 }
-.changes-staged {
+.changes-staged, .green {
     color: lime;
 }
 .untracked::before, .changes-not-staged::before, .changes-staged::before {

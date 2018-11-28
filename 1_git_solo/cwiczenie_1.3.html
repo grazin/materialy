@@ -32,7 +32,7 @@ Switched to a new branch 'experiment-2'</code></pre>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
-<pre><code>$ git status<br/>
+                <pre><code>$ git status<br/>
 On branch experiment-2
 Changes not staged for commit:
     (use "git add &lt;file&gt;..." to update what will be committed)
@@ -82,7 +82,7 @@ Changes to be committed:
             <div class="git">
                 <pre><code>$ git checkout master</code></pre>
             </div>
-            <p>W tak zwanym międzyczasie, potrzebujesz zrobić drobne poprawki na głównym branczu. 
+            <p>W tak zwanym międzyczasie, potrzebujesz zrobić drobne poprawki na głównym branczu.
                 Przejdź na brancz główny poleceniem <span class="command">checkout</span>.
             </p>
         </div>
@@ -101,12 +101,41 @@ $ git rebase master
 First, rewinding head to replay your work on top of it...
 Applying: Komit na eksperymencie</code></pre>
             </div>
-            <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej. 
+            <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej.
                 Chcesz aby zmiany eksperymentalne znalazły się PO wszystkich zmianach na branczu głównym.
-                <br/> Żeby to osiągnąć trzeba brancz eksperymentalny zribejzować względem brancza master.
+                <br /> Żeby to osiągnąć trzeba brancz eksperymentalny zribejzować względem brancza master.
                 Użyj komendy <span class="command">rebase</span> będąc na branczu eksperymentalnym.
             </p>
         </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <div class="piece">
+            <div class="git">
+                <pre><code>$ git checkout master 
+$ git merge experiment-2
+Updating a77dc6a..7068555
+Fast-forward
+ 1_git_solo/cwiczenie_1.3.html   | 113 <span class="red">++++++++++++++++++++++++++++++++++++++++</span>
+ 1_git_solo/fork.after.merge.png | Bin <span class="red">0</span> -> <span class="green">46155</span> bytes
+ 2 files changed, 113 insertions(+)
+ create mode 100644 1_git_solo/cwiczenie_1.3.html
+ create mode 100644 1_git_solo/fork.after.merge.png
+</code></pre>
+            </div>
+            <p>Teraz można te zmiany domerdżować do brancza głównego. Przejdź do brancza master i zmerdżuj brancz
+                experiment-2.<br />
+                Zauważ, że Git nie poprosił teraz o mesydż.
+            </p>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <div class="piece">
+            <div class="img">
+                <img src="fork.after.rebase.merge.png" />
+            </div>
+            <p>Na grafie w dowolnym GUI zobacz jak rysuje się graf po takim merdżu. Jaka jest różnica względem
+                poprzedniego ćwiczenia?
+            </p>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
     </div>
 </body>
 
