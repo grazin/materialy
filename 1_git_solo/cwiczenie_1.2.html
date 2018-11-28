@@ -18,6 +18,7 @@
         <img style="height: 150px" src="https://cdn-images-1.medium.com/max/1200/1*70aOJ1osE9C8cVZUkmH95g.png" />
         <p>Użyj repozytorium z poprzedniego ćwiczenia.</p>
 
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git add .
@@ -26,22 +27,22 @@ $ git commit -m "Drugi commit"
 
 $ git push origin master</code></pre>
             </div>
-            <p>Stwórz jeszcze jeden komit, tak, żeby mieć co najmniej 2. Dodaj nowy plik z dowolną treścią, następnie <span class="command">git add .</span>,  
-                <span class="command">git commit</span> i <span class="command">git push</span>, tym razem już bez przełącznika <span class="command">-u</span>.</p>
+            <p>Stwórz jeszcze jeden komit, tak, żeby mieć co najmniej 2. Dodaj nowy plik z dowolną treścią, następnie
+                <span class="command">git add .</span>,
+                <span class="command">git commit</span> i <span class="command">git push</span>, tym razem już bez
+                przełącznika <span class="command">-u</span>.</p>
         </div>
-
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git log --oneline
 3f3e187 (HEAD -> master, origin/master) Drugi commit
 13bb5ed Iniszial komit mesydż</code></pre>
             </div>
-            <p>Historię możesz podejrzeć poleceniem <span class="command">git log</span> 
+            <p>Historię możesz podejrzeć poleceniem <span class="command">git log</span>
                 z przełęcznikiem <span class="command">--oneline</span> jeśli chcesz tylko skróconą wersję.</p>
         </div>
-        
-
-
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git checkout -b experiment-1
@@ -54,8 +55,7 @@ Switched to a new branch 'experiment-1'</code></pre>
             </p>
 
         </div>
-        <div class="clear"></div>
-
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git status<br/>
@@ -76,10 +76,8 @@ no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
             <p>Utwórz jeden nowy plik i wprowadź zmiany w już istniejącym. Zobacz jaki jest teraz stan repozytorium za
                 pomocą polecenia <span class="command">status</span>.
             </p>
-
         </div>
-        <div class="clear"></div>
-
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git add .
@@ -95,8 +93,7 @@ Changes to be committed:
             </p>
 
         </div>
-        <div class="clear"></div>
-
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
                 <pre><code>$ git commit -m "Mój komit mesydż"
@@ -106,37 +103,36 @@ Changes to be committed:
             </div>
             <p>Zakomituj zmiany z dowolnym mesydżem.
             </p>
-
         </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
             <div class="git">
-                <pre><code>$ git checkout master
-$ git merge experiment-1 --ff</code></pre>
+                <pre><code>$ git checkout master</code></pre>
             </div>
-            <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej.
-                Użyj przełącznika <span class="command">--ff</span>, który oznacza fast forward.
+            <p>W tak zwanym międzyczasie, potrzebujesz zrobić drobne poprawki na głównym branczu. 
+                Przejdź na brancz główny poleceniem <span class="command">checkout</span>.
             </p>
         </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="obrazek">
-                obrazek z gui
-            </div>
-            <p>Zobacz na grafie w dowolnym GUI skutek tego merdża.
-            </p>
-        </div>
-
-        <div class="piece">
-            <div class="git">
-                <pre><code>$ git checkout master
-$ git merge experiment-1 --no-ff</code></pre>
-            </div>
-            <p>Powtórz to ćwiczenie jeszcze raz, utwórz nowy bracz na nowy eksperyment, na przykład <span class="command">experiment-2</span>, 
-                ale tym razem przy merdżu użyj przełącznika <span class="command">--no-ff</span>.
+                <div class="img">
+                </div>
+                <p>Zrób dowolną zmianę, dodaj do indeksu, zakomituj i pusznij, te polecenia już znasz.
                 </p>
-        </div>
+            </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-                <div class="git">
-<pre><code><span class="message">Merge branch 'experiment-2' into master</span>
+            <div class="git">
+                <pre><code>$ git merge experiment-1</code></pre>
+            </div>
+            <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej. 
+                Użyj komendy <span class="command">merge</span> z głównego brancza.
+            </p>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
+        <div class="piece">
+            <div class="git">
+                <pre><code><span class="message">Merge branch 'experiment-1' into master</span>
 
 <span class="comment"># Please enter a commit message to explain why this merge is necessary,
 # especially if it merges an updated upstream into a topic branch.
@@ -149,20 +145,22 @@ $ git merge experiment-1 --no-ff</code></pre>
 ~
 ~
 ~</code></pre>
-                </div>
-                <p>Git zapyta o mesydż dodatkowego komita, który zostanie utworzony w skutek takiego merdża. Można ten krok pominąć, zostawiając domyślny mesydż. 
-                    Po prostu wyjdź z tego trybu skrótem <span class="command">Shift+zz</span> lub <span class="command">:wq</span>.
-                    </p>
             </div>
-
+            <p>Git zapyta o mesydż dodatkowego komita, który zostanie utworzony w skutek takiego merdża. Można ten krok
+                pominąć, zostawiając domyślny mesydż.
+                Po prostu wyjdź z tego trybu skrótem <span class="command">Shift+zz</span> lub <span class="command">:wq</span>.
+            </p>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-                <div class="obrazek">
+            <div class="obrazek">
 
-                        
-                </div>
-                <p>Na grafie w dowolnym GUI porównaj skutki obu merdży.
-                </p>
+
             </div>
+            <p>Na grafie w dowolnym GUI zobacz jak rysuje się graf po takim merdżu.
+            </p>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------- -->
 
     </div>
 </body>
