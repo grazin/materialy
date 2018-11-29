@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+</head>
+
+<body>
+    <div class="content">
+        <p class="plot">
+            Wraz ze współpracownikami z zespołu postanowiliście zacząć stosować ribejz przed merdżowaniem branczy, 
+            żeby zapewnić czytelność repozytorium, uniknąć rozwiązywania konfliktów na głównym branczu.</p>
+        <img style="height: 250px" src="startrek.jpg" />
+        <p>Użyjcie repozytorium z poprzedniego ćwiczenia kapitana Kirka.</p>
+
+        <div class="team-work">
+            <div class="team-member">
+                    <p class="plot">Captain Kirk</p>
+                <p><img src="head_kirk.jpg" class="member" />Stwórz brancz <span class="command">feature-kirk-2</span>.</p> 
+                <div class="git">
+                        <pre><code>$ git checkout -b feature-kirk-2</code></pre>
+                    </div>
+                <p>Do pliku <span class="command">stepy.akermańskie.txt</span>
+                    dodaj następną zwrotkę:</p>
+                <p class="poem"><i>
+                        Już mrok zapada, nigdzie drogi ni kurhanu;<br />
+Patrzę w niebo, gwiazd szukam, przewodniczek łodzi;<br />
+Tam z dala błyszczy obłok - tam jutrzenka wschodzi;<br />
+To błyszczy Dniestr, to weszła lampa Akermanu.</i>
+                </p>
+                <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
+                    Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
+                    jeszcze na zdalnym repozytorium. </p>
+                <div class="git">
+                    <pre><code>$ git add .
+
+$ git commit -m "cpt. Kirk stepy akermańskie cz.2"
+
+$ git push -u origin feature-kirk-2</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                    <p class="plot">Mr. Spock</p>
+                    <p><img src="head_spock.jpg" class="member" />Stwórz brancz <span class="command">feature-spock-2</span>.</p> 
+
+                    <div class="git">
+                            <pre><code>$ git checkout -b feature-spock-2</code></pre>
+                        </div>
+                    <p>Do pliku <span class="command">w.malinowym.chruśniaku.txt</span>
+                        dodaj następną zwrotkę:</p>
+                <p class="poem"><i>
+                        Bąk złośnik huczał basem, jakby straszył kwiaty,<br />
+Rdzawe guzy na słońcu wygrzewał liść chory,<br />
+Złachmaniałych pajęczyn skrzyły się wisiory,<br />
+I szedł tyłem na grzbiecie jakiś żuk kosmaty.</i>
+                </p>
+                <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
+                    Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
+                    jeszcze na zdalnym repozytorium. </p>
+                <div class="git">
+                    <pre><code>$ git add .
+    
+$ git commit -m "mr. Spock w malinowym chruśniaku cz.2"
+
+$ git push -u origin feature-spock-2</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+                <p><img src="head_kirk.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas na code
+                    review zmian Spocka.</p>
+                <div class="git">
+                    <pre><code>$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:grazin/repo2
+ * [new branch]      feature-spock-2 -> origin/feature-spock-2</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas na code
+                    review zmian Kirka.</p>
+                <div class="git">
+                    <pre><code>$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:grazin/repo2
+ * [new branch]      feature-kirk-2 -> origin/feature-kirk-2</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="team-work">
+            <div class="team-member">
+                <p><img src="head_kirk.jpg" class="member" />Przejdź na brancz Spocka feature-spock-2. Przejrzyj zmiany w dowolnym GUI.</p>
+                <div class="git">
+                    <pre><code>$ checkout feature-spock-2</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Przejdź na brancz Kirka feature-kirk-2. Przejrzyj zmiany w dowolnym GUI.</p>
+                <div class="git">
+                    <pre><code>$ checkout feature-kirk-2</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+
+            </div>
+            <div class="team-member">
+                    <p><img src="head_spock.jpg" class="member" />Jeśli Kirk zatwierdził twoje zmiany, wróc na swój brancz, żeby następnie
+                        zribejzować go i potem go domerdżować do brancza głównego. Zribejzuj swój brancz względem głównego i pusznij.</p>
+                    <div class="git">
+                        <pre><code>$ checkout feature-spock-2
+
+$ git rebase master
+Current branch feature-spock-2 is up to date.
+                                
+$ git push origin feature-spock-2</code></pre>
+                    </div>
+                    <p>Następnie przejdź na mastera i zmerdżuj swoje zmiany. Pusznij.</p>
+                    <div class="git">
+                            <pre><code>$ git checkout master
+                                    
+$ git merge feature-spock-2
+    
+$ git push origin master</code></pre>
+                        </div>
+            </div>
+        </div>
+        
+        <div class="team-work">
+            <div class="team-member">
+                    <p><img src="head_kirk.jpg" class="member" />Jeśli Spock zatwierdził twoje zmiany. Najpierw uaktualnij główny brancz poleceniem <span class="command">git pull</span>.</p>
+                    
+                    <div class="git">
+                    <pre><code>$ git checkout master
+
+$ git pull</code></pre>
+                </div>
+                <p>Teraz przejdź na swój brancz i wykonaj ribejz. Następnie pusznij zmiany.</p>
+                <div class="git">
+                        <pre><code>$ git checkout feature-kirk-2
+
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: cpt. Kirk stepy akermańskie cz.2
+                            
+$ git push origin feature-kirk-2
+To github.com:grazin/repo2.git
+<span class="red"> ! [rejected]</span>        feature-kirk-2 -> feature-kirk-2 (non-fast-forward)
+<span class="red">error: failed to push some refs to 'git@github.com:grazin/repo2.git'</span>
+<span class="message">hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.</span></code></pre>
+                </div>
+                <p>Git odrzucił pusza, ponieważ ribejz powoduje zmianę historii. W takim wypadku pusza należy wymusić przełącznikiem 
+                    <span class="command">--force</span>, <span class="command">-f</span> lub dać znak <span class="command">+</span> przed nazwą brancza. Tak jak poniżej.
+                </p>
+                <div class="git">
+                        <pre><code>$ git push origin +feature-kirk-2</code></pre>
+                    </div>
+                    <p>Następnie przejdź na mastera i zmerdżuj swoje zmiany. Pusznij.</p>
+                    <div class="git">
+                            <pre><code>$ git checkout master
+                                    
+$ git merge feature-kirk-2
+    
+$ git push origin master</code></pre>
+                        </div>
+            </div>
+            <div class="team-member">
+                    
+            </div>
+        </div>
+
+        <div class="team-work">
+                <div class="team-member">
+                    
+                </div>
+                <div class="team-member">
+                        <p><img src="head_spock.jpg" class="member" />Uaktualnij swoje lokalne repozytorium o zmiany Kirka.</p>
+                    
+                        <div class="git">
+                            <pre><code>$ git pull</code></pre>
+                        </div>
+                </div>
+            </div>
+
+        <div class="full-piece" >
+            <p><img src="head_kirk.jpg" class="member" />
+                <img src="head_spock.jpg" class="member" /></p>
+                <p>Spójrzcie teraz każdy u siebie na graf w dowolnym GUI. Powinien wyglądać jak poniżej.</p>
+                <img src="fork.after.rebase.merge1.png" />
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

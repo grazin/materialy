@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+</head>
+
+<body>
+    <div class="content">
+        <p class="plot">
+            Nie raz zdarzy się konieczność wprowadzenia zmian w tym samym miejscu przez dwóch członków zespołu.
+            Wówczas Git nie będzie mógł z tym sobie poradzić i zwróci konflikt, do rozwiązania przez was.</p>
+        <img style="height: 250px" src="spock.kirk.fight.jpg" />
+        <p>Użyjcie repozytorium z poprzedniego ćwiczenia kapitana Kirka.</p>
+
+        <div class="team-work">
+            <div class="team-member">
+                <p class="plot">Captain Kirk</p>
+                <p><img src="head_kirk.jpg" class="member" />Stwórz brancz <span class="command">feature-kirk-3</span>.</p>
+                <div class="git">
+                    <pre><code>$ git checkout -b feature-kirk-3</code></pre>
+                </div>
+                <p>W pliku <span class="command">stepy.akermańskie.txt</span>
+                    w 2 linijce zamień 2 dowolne słowa na ich synonimy.</p>
+                <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
+                    Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
+                    jeszcze na zdalnym repozytorium. </p>
+                <div class="git">
+                    <pre><code>$ git add .
+    
+$ git commit -m "cpt. Kirk stepy akermańskie cz.3"
+
+$ git push -u origin feature-kirk-3</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                <p class="plot">Mr. Spock</p>
+                <p><img src="head_spock.jpg" class="member" />Stwórz brancz <span class="command">feature-spock-3</span>.</p>
+
+                <div class="git">
+                    <pre><code>$ git checkout -b feature-spock-3</code></pre>
+                </div>
+                <p>W pliku <span class="command">stepy.akermańskie.txt</span>
+                    w 2 linijce zamień 2 dowolne słowa na ich synonimy.</p>
+                <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
+                    Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
+                    jeszcze na zdalnym repozytorium. </p>
+                <div class="git">
+                    <pre><code>$ git add .
+        
+$ git commit -m "mr. Spock stepy akermańskie cz.3"
+
+$ git push -u origin feature-spock-3</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+                <p><img src="head_kirk.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas na
+                    code
+                    review zmian Spocka.</p>
+                <div class="git">
+                    <pre><code>$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:grazin/repo2
+ * [new branch]      feature-spock-3 -> origin/feature-spock-3</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas
+                    na code
+                    review zmian Kirka.</p>
+                <div class="git">
+                    <pre><code>$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:grazin/repo2
+ * [new branch]      feature-kirk-3 -> origin/feature-kirk-3</code></pre>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="team-work">
+            <div class="team-member">
+                <p><img src="head_kirk.jpg" class="member" />Przejdź na brancz Spocka feature-spock-3. Przejrzyj zmiany
+                    w dowolnym GUI.</p>
+                <div class="git">
+                    <pre><code>$ checkout feature-spock-3</code></pre>
+                </div>
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Przejdź na brancz Kirka feature-kirk-3. Przejrzyj zmiany
+                    w dowolnym GUI.</p>
+                <div class="git">
+                    <pre><code>$ checkout feature-kirk-3</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Jeśli Kirk zatwierdził twoje zmiany, wróc na swój brancz,
+                    żeby następnie
+                    zribejzować go i potem go domerdżować do brancza głównego. Zribejzuj swój brancz względem głównego
+                    i pusznij.</p>
+                <div class="git">
+                    <pre><code>$ checkout feature-spock-3
+    
+$ git rebase master
+                                
+$ git push origin feature-spock-3</code></pre>
+                </div>
+                <p>Następnie przejdź na mastera i zmerdżuj swoje zmiany. Pusznij.</p>
+                <div class="git">
+                    <pre><code>$ git checkout master
+                                        
+$ git merge feature-spock-3
+    
+$ git push origin master</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+                <p><img src="head_kirk.jpg" class="member" />Jeśli Spock zatwierdził twoje zmiany. Najpierw uaktualnij
+                    główny brancz poleceniem <span class="command">git pull</span>.</p>
+
+                <div class="git">
+                    <pre><code>$ git checkout master
+    
+$ git pull</code></pre>
+                </div>
+                <p>Teraz przejdź na swój brancz i wykonaj ribejz. Następnie pusznij zmiany.</p>
+                <div class="git">
+                    <pre><code>$ git checkout feature-kirk-3
+    
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: cpt. Kirk stepy akermańskie cz.3
+Using index info to reconstruct a base tree...
+M       "stepy.akerma\305\204skie.txt"
+Falling back to patching base and 3-way merge...
+Auto-merging stepy.akermańskie.txt
+CONFLICT (content): Merge conflict in stepy.akermańskie.txt
+error: Failed to merge in the changes.
+Patch failed at 0001 cpt. Kirk stepy akermańskie cz.3
+Use 'git am --show-current-patch' to see the failed patch
+
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm &lt;conflicted_files&gt;", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".</code></pre>
+                </div>
+                <p>Git zgłosił konflikty. Chcesz dowiedzieć się w jakich plikach? Użyj polecenia <span class="command">diff</span>
+                    w poniższy sposób:</p>
+                <div class="git">
+                    <pre><code>$ git diff --name-only --diff-filter=U
+"stepy.akermańskie.txt" </code></pre>
+                </div>
+
+                <p>Git zgłosił konflikt w pliku <span class="command">stepy.akermańskie.txt</span>.
+                    Otwórz ten plik w zwykłym edytorze tekstu.</p>
+            </div>
+            <div class="team-member">
+
+            </div>
+        </div>
+
+        <div class="full-piece">
+            <p><img src="head_kirk.jpg" class="member" />
+                <img src="head_spock.jpg" class="member" /></p>
+            <p>Razem ze Spokiem manualnie rozwiążcie konflikt. <br />
+                Plik z konfliktem ma oznaczone skonfliktowane zmiany:</p>
+            <div class="file">
+                <pre>
+<<<<<<< HEAD
+zmienona linijka/linijki kodu w branczu względem którego się ribejzujesz
+=======
+zmienona linijka/linijki kodu w branczu który ribejzujesz
+>>>>>>> komit #1</pre>
+            </div>
+            <p>Rozwiązanie konfliktu polega doprowadzeniu zawartości pliku do ustalonej ostatecznej wersji (już bez znaczników).</p>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+                <p>
+                    Zapisany plik ze zmianami należy oznaczyć jako rozwiązany. Wystarczy wykonać polecenie <span class="command">git
+                        add .</span>. Potem upewnij się, że wszsytkie konflikty zostały rozwiązane.
+                </p>
+                <div class="git">
+                        <pre><code>$ git add .
+                                            
+$ git diff --name-only --diff-filter=U</code></pre>
+                    </div>
+                <p>Jeżeli nie ma, to teraz trzeba dokończyć ribejza</p>
+                <div class="git">
+                        <pre><code>$ git rebase --continue
+Applying: cpt. Kirk stepy akermańskie cz.3</code></pre>
+                    </div>
+                <p>
+                    Pusznij teraz ten brancz. Pamiętaj, że zmieniona została historia i trzeba wymusić.
+                </p>
+                <div class="git">
+                        <pre><code>$ git push origin +feature-kirk-3</code></pre>
+                    </div>
+                <p>Następnie przejdź na mastera i zmerdżuj swoje zmiany. Pusznij.</p>
+                <div class="git">
+                    <pre><code>$ git checkout master
+                                        
+$ git merge feature-kirk-2
+    
+$ git push origin master</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-work">
+            <div class="team-member">
+
+            </div>
+            <div class="team-member">
+                <p><img src="head_spock.jpg" class="member" />Uaktualnij swoje lokalne repozytorium o zmiany Kirka.</p>
+
+                <div class="git">
+                    <pre><code>$ git pull</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div class="full-piece">
+            <p><img src="head_kirk.jpg" class="member" />
+                <img src="head_spock.jpg" class="member" /></p>
+            <p>Spójrzcie teraz każdy u siebie na graf w dowolnym GUI. Powinien wyglądać jak poniżej.</p>
+            <img src="fork.after.rebase.merge2.png" />
+
+        </div>
+
+    </div>
+</body>
+
+</html>

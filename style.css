@@ -24,6 +24,12 @@ pre {
     margin: 0;
 }
 
+.file pre {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
 .untracked, .changes-not-staged, .red {
     color: red;
 }
@@ -38,6 +44,10 @@ pre {
 }
 .comment {
     color: #00ffff
+}
+
+p {
+    clear: both;
 }
 
 p.plot {
@@ -76,6 +86,8 @@ p.poem {
     top: 0;
     width: 70%;
     font-size: 16px;
+
+    clear: both;
 }
 
 .team-member .git {
@@ -86,6 +98,20 @@ p.poem {
 .img {
     width: 70%;
     padding-right: 10px;
+}
+
+img.member {
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    float: left;
+}
+
+.full-piece {
+    border-top: 2px dashed rgba(82, 81, 153, .75);
+    margin-bottom: 30px;
+    padding-top: 30px;
 }
 
 .piece {
