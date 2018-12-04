@@ -18,10 +18,14 @@
         <p>Użyj repozytorium z poprzedniego ćwiczenia.</p>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git checkout -b experiment-2
-Switched to a new branch 'experiment-2'</code></pre>
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git checkout -b experiment-2</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+        <pre><code>Switched to a new branch 'experiment-2'</code></pre>
             </div>
+        </div>
             <p>
                 Utwórz nowy lokalny brancz o nazwie <span class="command">experiment-2</span>. Komenda <span class="command">checkout</span>
                 z przełącznikiem <span class="command">-b</span>
@@ -31,9 +35,12 @@ Switched to a new branch 'experiment-2'</code></pre>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git status<br/>
-On branch experiment-2
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git status</code></pre></div>
+                <div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>On branch experiment-2
 Changes not staged for commit:
     (use "git add &lt;file&gt;..." to update what will be committed)
     (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
@@ -47,60 +54,80 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
             </div>
+        </div>
             <p>Wprowadź dowolne zmiany w plikach repozytorium. Zobacz jaki jest teraz stan repozytorium za
                 pomocą polecenia <span class="command">status</span>.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git add .
-$ git status
-On branch experiment-1
+
+$ git status</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>On branch experiment-2
 Changes to be committed:
   (use "git reset HEAD &lt;file&gt;..." to unstage)
 
 <span class="changes-staged">new file:   Nowy dokument tekstowy.txt</span>
 <span class="changes-staged">modified:   about.txt</span></code></pre>
             </div>
+        </div>
             <p>Dodaj zmiany do indeksu poleceniem <span class="command">add .</span> i sprawdź ponownie stan.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git commit -m "Mój komit mesydż"
-[experiment-1 deed0580] Mój komit mesydż
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git commit -m "Mój komit mesydż"</code></pre></div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                                        <pre><code>[experiment-2 deed0580] Mój komit mesydż
  2 files changed, 3 insertions(+), 1 deletion(-)
  create mode 100644 Nowy dokument tekstowy.txt</code></pre><br />
             </div>
+        </div>
             <p>Zakomituj zmiany z dowolnym mesydżem.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git checkout master</code></pre>
             </div>
+        </div>
             <p>W tak zwanym międzyczasie, potrzebujesz zrobić drobne poprawki na głównym branczu.
                 Przejdź na brancz główny poleceniem <span class="command">checkout</span>.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="img">
+                <div class="howto">
+                        <div class="git">
+                                <pre><code>$ git do it --yourself ;)</code></pre>
+                            </div>
             </div>
             <p>Zrób dowolną zmianę, dodaj do indeksu, zakomituj i pusznij, te polecenia już znasz.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git checkout experiment-1
-$ git rebase master
-First, rewinding head to replay your work on top of it...
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git checkout experiment-2
+
+$ git rebase master</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>First, rewinding head to replay your work on top of it...
 Applying: Komit na eksperymencie</code></pre>
             </div>
+        </div>
             <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej.
                 Chcesz aby zmiany eksperymentalne znalazły się PO wszystkich zmianach na branczu głównym.
                 <br /> Żeby to osiągnąć trzeba brancz eksperymentalny zribejzować względem brancza master.
@@ -109,10 +136,14 @@ Applying: Komit na eksperymencie</code></pre>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git checkout master 
-$ git merge experiment-2
-Updating a77dc6a..7068555
+
+$ git merge experiment-2</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>Updating a77dc6a..7068555
 Fast-forward
  1_git_solo/cwiczenie_1.3.html   | 113 <span class="red">++++++++++++++++++++++++++++++++++++++++</span>
  1_git_solo/fork.after.merge.png | Bin <span class="red">0</span> -> <span class="green">46155</span> bytes
@@ -121,6 +152,7 @@ Fast-forward
  create mode 100644 1_git_solo/fork.after.merge.png
 </code></pre>
             </div>
+        </div>
             <p>Teraz można te zmiany domerdżować do brancza głównego. Przejdź do brancza master i zmerdżuj brancz
                 experiment-2.<br />
                 Zauważ, że Git nie poprosił teraz o mesydż.
@@ -128,9 +160,11 @@ Fast-forward
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="img">
+                <div class="howto">
+                        <div class="img">
                 <img src="fork.after.rebase.merge.png" />
             </div>
+        </div>
             <p>Na grafie w dowolnym GUI zobacz jak rysuje się graf po takim merdżu. Jaka jest różnica względem
                 poprzedniego ćwiczenia?
             </p>

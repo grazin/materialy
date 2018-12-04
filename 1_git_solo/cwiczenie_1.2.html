@@ -20,6 +20,7 @@
 
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
+                <div class="howto">
             <div class="git">
                 <pre><code>$ git add .
 
@@ -27,6 +28,7 @@ $ git commit -m "Drugi commit"
 
 $ git push origin master</code></pre>
             </div>
+        </div>
             <p>Stwórz jeszcze jeden komit, tak, żeby mieć co najmniej 2. Dodaj nowy plik z dowolną treścią, następnie
                 <span class="command">git add .</span>,
                 <span class="command">git commit</span> i <span class="command">git push</span>, tym razem już bez
@@ -34,20 +36,27 @@ $ git push origin master</code></pre>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git log --oneline
-3f3e187 (HEAD -> master, origin/master) Drugi commit
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git log --oneline</code></pre></div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response"><pre><code>3f3e187 (HEAD -> master, origin/master) Drugi commit
 13bb5ed Iniszial komit mesydż</code></pre>
-            </div>
+        </div>
+    </div>
             <p>Historię możesz podejrzeć poleceniem <span class="command">git log</span>
                 z przełęcznikiem <span class="command">--oneline</span> jeśli chcesz tylko skróconą wersję.</p>
-        </div>
+    </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git checkout -b experiment-1
-Switched to a new branch 'experiment-1'</code></pre>
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git checkout -b experiment-1</code></pre></div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                        <pre><code>Switched to a new branch 'experiment-1'</code></pre>
             </div>
+        </div>
             <p>
                 Utwórz nowy lokalny brancz o nazwie <span class="command">experiment-1</span>. Komenda <span class="command">checkout</span>
                 z przełącznikiem <span class="command">-b</span>
@@ -57,9 +66,12 @@ Switched to a new branch 'experiment-1'</code></pre>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git status<br/>
-On branch experiment-1
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git status</code></pre></div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                        <pre><code>On branch experiment-1
 Changes not staged for commit:
   (use "git add &lt;file&gt;..." to update what will be committed)
   (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
@@ -73,42 +85,54 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")</code></pre>
             </div>
+        </div>
             <p>Utwórz jeden nowy plik i wprowadź zmiany w już istniejącym. Zobacz jaki jest teraz stan repozytorium za
                 pomocą polecenia <span class="command">status</span>.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git add .
-$ git status
-On branch experiment-1
+
+$ git status</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+        <pre><code>On branch experiment-1
 Changes to be committed:
   (use "git reset HEAD &lt;file&gt;..." to unstage)
 
 <span class="changes-staged">new file:   Nowy dokument tekstowy.txt</span>
 <span class="changes-staged">modified:   about.txt</span></code></pre>
             </div>
+        </div>
             <p>Dodaj zmiany do indeksu poleceniem <span class="command">add .</span> i sprawdź ponownie stan.
             </p>
 
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git commit -m "Mój komit mesydż"
-[experiment-1 deed0580] Mój komit mesydż
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git commit -m "Mój komit mesydż"</code></pre></div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>[experiment-1 deed0580] Mój komit mesydż
  2 files changed, 3 insertions(+), 1 deletion(-)
  create mode 100644 Nowy dokument tekstowy.txt</code></pre><br />
             </div>
+        </div>
             <p>Zakomituj zmiany z dowolnym mesydżem.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git checkout master</code></pre>
             </div>
+        </div>
             <p>W tak zwanym międzyczasie, potrzebujesz zrobić drobne poprawki na głównym branczu. 
                 Przejdź na brancz główny poleceniem <span class="command">checkout</span>.
             </p>
@@ -122,16 +146,20 @@ Changes to be committed:
             </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git merge experiment-1</code></pre>
             </div>
+        </div>
             <p>Twój eksperyment okazał się sukcesem, chcesz więc go dołączyć do głównego brancza i pracować dalej. 
                 Użyj komendy <span class="command">merge</span> z głównego brancza.
             </p>
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="response">vim:</div>
+                        <div class="git with-response">
                 <pre><code><span class="message">Merge branch 'experiment-1' into master</span>
 
 <span class="comment"># Please enter a commit message to explain why this merge is necessary,
@@ -146,6 +174,7 @@ Changes to be committed:
 ~
 ~</code></pre>
             </div>
+        </div>
             <p>Git zapyta o mesydż dodatkowego komita, który zostanie utworzony w skutek takiego merdża. Można ten krok
                 pominąć, zostawiając domyślny mesydż.
                 Po prostu wyjdź z tego trybu skrótem <span class="command">Shift+zz</span> lub <span class="command">:wq</span>.
@@ -153,9 +182,11 @@ Changes to be committed:
         </div>
         <!-- ---------------------------------------------------------------------------------------------- -->
         <div class="piece">
+                <div class="howto">
             <div class="img">
                 <img src="fork.after.merge.png" />
             </div>
+        </div>
             <p>Na grafie w dowolnym GUI zobacz jak rysuje się graf po takim merdżu.
             </p>
         </div>

@@ -10,8 +10,8 @@
 <body>
     <div class="content">
         <p class="plot">
-                Chcesz rozpocząć pracę nad dużym samodzielnym projektem. Chcesz, żeby twoja praca była bezpieczna i chcesz
-                eksplorować różne podejścia do tematu.
+            Chcesz rozpocząć pracę nad dużym samodzielnym projektem. Chcesz, żeby twoja praca była bezpieczna i chcesz
+            eksplorować różne podejścia do tematu.
         </p>
         <img style="height: 150px" src="https://cdn-images-1.medium.com/max/1200/1*70aOJ1osE9C8cVZUkmH95g.png" />
         <p></p>
@@ -44,12 +44,16 @@
                 otwórz konsolę i przejdź do wybranej lokalizacji za pomocą wiersza poleceń konsoli <span class="command">cd</span>.</p>
         </div>
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git clone git@github.com:grazin/materialy.git
-Cloning into 'materialy'...
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ git clone git@github.com:grazin/materialy.git</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>Cloning into 'materialy'...
 Warning: Permanently added the RSA host key for IP address '140.82.118.3' to the list of known hosts.
 warning: You appear to have cloned an empty repository.</code></pre>
-
+                </div>
             </div>
             <p>Sklonuj repozytorium.</p>
 
@@ -57,16 +61,21 @@ warning: You appear to have cloned an empty repository.</code></pre>
         <div class="clear"></div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ cd materialy
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ cd materialy
 
-$ git status
-On branch master
+$ git status</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>On branch master
 
 No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 </code></pre>
+                </div>
             </div>
             <p>Przejdź do sklonowanego repozytorium i odczytaj status repozytorium poleceniem <span class="command">git
                     status</span>.
@@ -75,9 +84,13 @@ nothing to commit (create/copy files and use "git add" to track)
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git status
-On branch master
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ git status</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>On branch master
 
 No commits yet
 
@@ -88,6 +101,7 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)        
 </code></pre>
+                </div>
             </div>
             <p>Utwórz jeden nowy plik z dowolną treścią. Na przykład <span class="command">readme.txt</span>. Zobacz
                 jaki jest teraz status repozytorium.
@@ -96,35 +110,50 @@ nothing added to commit but untracked files present (use "git add" to track)
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git add .
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ git add .
 
-$ git status
-On branch master
+$ git status</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>On branch master
 Changes to be committed:
     (use "git reset HEAD &lt;file&gt;..." to unstage)
 
 <span class="changes-staged">new file:   readme.txt</span></code></pre>
+                </div>
+
+
             </div>
             <p>Dodaj zmiany do indeksu poleceniem <span class="command">add .</span> i sprawdź ponownie status.
             </p>
-
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git commit -m "Iniszial komit mesydż"
-[master (root-commit) 13bb5ed] Iniszial komit mesydż
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ git commit -m "Iniszial komit mesydż"</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>[master (root-commit) 13bb5ed] Iniszial komit mesydż
 1 file changed, 1 insertion(+)
-create mode 100644 readme.txt
-
-$ git status
-On branch master
+create mode 100644 readme.txt</code></pre>
+                </div>
+                <br />
+                <div class="git">
+                    <pre><code>$ git status</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>On branch master
 Your branch is based on 'origin/master', but the upstream is gone.
   (use "git branch --unset-upstream" to fixup)
 
-nothing to commit, working tree clean
-</code></pre>
+nothing to commit, working tree clean</code></pre>
+                </div>
             </div>
             <p>Zakomituj teraz zmiany z dowolnym mesydżem. Sprawdź ponownie status.
             </p>
@@ -132,9 +161,13 @@ nothing to commit, working tree clean
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git push -u origin master
-Warning: Permanently added the RSA host key for IP address '140.82.118.4' to the list of known hosts.
+            <div class="howto">
+                <div class="git">
+                    <pre><code>$ git push -u origin master</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>Warning: Permanently added the RSA host key for IP address '140.82.118.4' to the list of known hosts.
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 263 bytes | 11.00 KiB/s, done.
@@ -145,13 +178,19 @@ remote:      https://github.com/grazin/materialy/pull/new/master
 remote:
 To github.com:grazin/materialy.git
     * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
-
-$ git status
-On branch master
+Branch 'master' set up to track remote branch 'master' from 'origin'.</code></pre>
+                </div>
+                <br />
+                <div class="git">
+                    <pre><code>$ git status</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean</code></pre>
+                </div>
             </div>
             <p>Teraz pusznij zmiany do origina (czyli do GitHuba).
                 Ponieważ to pierwszy komit na tym branczu, użyj przełącznika <span class="command">-u</span>. Następnie
@@ -160,17 +199,24 @@ nothing to commit, working tree clean</code></pre>
         </div>
 
         <div class="piece">
+            <div class="howto">
                 <div class="git">
-                    <pre><code>$ git log
-<span class="message">commit 13bb5ed835a5832d752d9f00e74a4732f5a8382c</span> (HEAD -> master, origin/master)
+                    <pre><code>$ git log</code></pre></div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response"><pre><code><span class="message">commit 13bb5ed835a5832d752d9f00e74a4732f5a8382c</span> (HEAD -> master, origin/master)
 Author: IZABELA SZCZEPANIK &lt;izabela.szczepanik@ing.com&gt;
 Date:   Tue Nov 27 14:28:32 2018 +0100
 
     Iniszial komit mesydż</code></pre>
                 </div>
-                <p>Na koniec podejrzyj historię. Użyj polecenia <span class="command">git log</span>, zobacz także log w dowolnym GUI.
-                </p>
+                
             </div>
+            <p>Na koniec podejrzyj historię. Użyj polecenia <span class="command">git log</span>, zobacz także log
+                w
+                dowolnym GUI. <br />Jeśli nie zainstalowałeś jeszcze żadnego GUI, skorzystaj ze zintegrowanego z gitem gitk. Wpisz po prostu w konsoli 
+                <span class="command">gitk</span>.
+            </p>
+        </div>
     </div>
 </body>
 

@@ -71,7 +71,6 @@ p.poem {
 
 .team-member {
     width: 47%;
-    /*border: 1px solid black;*/
 }
 
 .git {
@@ -81,18 +80,44 @@ p.poem {
     color: gainsboro;
     border-radius: 5px;
     padding: 10px 5px;
-    /*float: right;*/
 
     top: 0;
-    width: 70%;
+    box-sizing: border-box;
+    width: 100%;
     font-size: 16px;
 
-    clear: both;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.with-response {
+    border-radius: 0 5px 5px 5px;
+}
+
+.response {
+    border: 1px solid rgb(64, 64, 64);
+    border-radius: 5px 20px 0 0;
+    background-color: rgb(230, 230, 230);
+    border-bottom: 0;
+    font-size: 14px;
+    width: 80px;
+    margin-top: 10px;
+    padding: 1px 6px 1px 6px;
 }
 
 .team-member .git {
     width: 100%;
     box-sizing: border-box;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 .img {
@@ -127,6 +152,11 @@ img.member {
 
 .piece p {
     width: 27%;
+    padding: 0;
+    margin: 0;
+}
+.piece .howto {
+    width: 70%;
     padding: 0;
     margin: 0;
 }
