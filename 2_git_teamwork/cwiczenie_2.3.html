@@ -22,7 +22,7 @@
                 <div class="git">
                     <pre><code>$ git checkout -b feature-kirk-3</code></pre>
                 </div>
-                <p>W pliku <span class="command">stepy.akermańskie.txt</span>
+                <p>W pliku <span class="command">stepy.akermanskie.txt</span>
                     w 2 linijce zamień 2 dowolne słowa na ich synonimy.</p>
                 <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
                     Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
@@ -30,7 +30,7 @@
                 <div class="git">
                     <pre><code>$ git add .
     
-$ git commit -m "cpt. Kirk stepy akermańskie cz.3"
+$ git commit -m "cpt. Kirk stepy akermanskie cz.3"
 
 $ git push -u origin feature-kirk-3</code></pre>
                 </div>
@@ -42,7 +42,7 @@ $ git push -u origin feature-kirk-3</code></pre>
                 <div class="git">
                     <pre><code>$ git checkout -b feature-spock-3</code></pre>
                 </div>
-                <p>W pliku <span class="command">stepy.akermańskie.txt</span>
+                <p>W pliku <span class="command">stepy.akermanskie.txt</span>
                     w 2 linijce zamień 2 dowolne słowa na ich synonimy.</p>
                 <p>Zapisz zmiany, zakomituj i pusznij zmiany na brancz zdalny.
                     Przełącznik <span class="command">-u</span> jest konieczny, ponieważ to nowy bracz, którego nie ma
@@ -50,7 +50,7 @@ $ git push -u origin feature-kirk-3</code></pre>
                 <div class="git">
                     <pre><code>$ git add .
         
-$ git commit -m "mr. Spock stepy akermańskie cz.3"
+$ git commit -m "mr. Spock stepy akermanskie cz.3"
 
 $ git push -u origin feature-spock-3</code></pre>
                 </div>
@@ -63,8 +63,11 @@ $ git push -u origin feature-spock-3</code></pre>
                     code
                     review zmian Spocka.</p>
                 <div class="git">
-                    <pre><code>$ git fetch origin
-remote: Enumerating objects: 4, done.
+                    <pre><code>$ git fetch origin</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
@@ -78,8 +81,11 @@ From github.com:grazin/repo2
                     na code
                     review zmian Kirka.</p>
                 <div class="git">
-                    <pre><code>$ git fetch origin
-remote: Enumerating objects: 4, done.
+                    <pre><code>$ git fetch origin</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
@@ -96,14 +102,14 @@ From github.com:grazin/repo2
                 <p><img src="head_kirk.jpg" class="member" />Przejdź na brancz Spocka feature-spock-3. Przejrzyj zmiany
                     w dowolnym GUI.</p>
                 <div class="git">
-                    <pre><code>$ checkout feature-spock-3</code></pre>
+                    <pre><code>$ git checkout feature-spock-3</code></pre>
                 </div>
             </div>
             <div class="team-member">
                 <p><img src="head_spock.jpg" class="member" />Przejdź na brancz Kirka feature-kirk-3. Przejrzyj zmiany
                     w dowolnym GUI.</p>
                 <div class="git">
-                    <pre><code>$ checkout feature-kirk-3</code></pre>
+                    <pre><code>$ git checkout feature-kirk-3</code></pre>
                 </div>
             </div>
         </div>
@@ -118,7 +124,7 @@ From github.com:grazin/repo2
                     zribejzować go i potem go domerdżować do brancza głównego. Zribejzuj swój brancz względem głównego
                     i pusznij.</p>
                 <div class="git">
-                    <pre><code>$ checkout feature-spock-3
+                    <pre><code>$ git checkout feature-spock-3
     
 $ git rebase master
                                 
@@ -149,16 +155,19 @@ $ git pull</code></pre>
                 <div class="git">
                     <pre><code>$ git checkout feature-kirk-3
     
-$ git rebase master
-First, rewinding head to replay your work on top of it...
-Applying: cpt. Kirk stepy akermańskie cz.3
+$ git rebase master</code></pre>
+</div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+    <pre><code>First, rewinding head to replay your work on top of it...
+Applying: cpt. Kirk stepy akermanskie cz.3
 Using index info to reconstruct a base tree...
-M       "stepy.akerma\305\204skie.txt"
+M       "stepy.akermanskie.txt"
 Falling back to patching base and 3-way merge...
-Auto-merging stepy.akermańskie.txt
-CONFLICT (content): Merge conflict in stepy.akermańskie.txt
+Auto-merging stepy.akermanskie.txt
+CONFLICT (content): Merge conflict in stepy.akermanskie.txt
 error: Failed to merge in the changes.
-Patch failed at 0001 cpt. Kirk stepy akermańskie cz.3
+Patch failed at 0001 cpt. Kirk stepy akermanskie cz.3
 Use 'git am --show-current-patch' to see the failed patch
 
 Resolve all conflicts manually, mark them as resolved with
@@ -169,11 +178,14 @@ To abort and get back to the state before "git rebase", run "git rebase --abort"
                 <p>Git zgłosił konflikty. Chcesz dowiedzieć się w jakich plikach? Użyj polecenia <span class="command">diff</span>
                     w poniższy sposób:</p>
                 <div class="git">
-                    <pre><code>$ git diff --name-only --diff-filter=U
-"stepy.akermańskie.txt" </code></pre>
+                    <pre><code>$ git diff --name-only --diff-filter=U</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>"stepy.akermanskie.txt" </code></pre>
                 </div>
 
-                <p>Git zgłosił konflikt w pliku <span class="command">stepy.akermańskie.txt</span>.
+                <p>Git zgłosił konflikt w pliku <span class="command">stepy.akermanskie.txt</span>.
                     Otwórz ten plik w zwykłym edytorze tekstu.</p>
             </div>
             <div class="team-member">
@@ -210,8 +222,11 @@ $ git diff --name-only --diff-filter=U</code></pre>
                     </div>
                 <p>Jeżeli nie ma, to teraz trzeba dokończyć ribejza</p>
                 <div class="git">
-                        <pre><code>$ git rebase --continue
-Applying: cpt. Kirk stepy akermańskie cz.3</code></pre>
+                        <pre><code>$ git rebase --continue</code></pre>
+                    </div>
+                    <div class="response">odpowiedź:</div>
+                    <div class="git with-response">
+                        <pre><code>Applying: cpt. Kirk stepy akermanskie cz.3</code></pre>
                     </div>
                 <p>
                     Pusznij teraz ten brancz. Pamiętaj, że zmieniona została historia i trzeba wymusić.

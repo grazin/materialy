@@ -52,15 +52,18 @@
                     Przejdź do tego repozytorium i dla pewności sprawdź status.
                 </p>
                 <div class="git">
-                    <pre><code>$ git clone git@github.com:grazin/repo-cpt-kirk.git
-Cloning into 'repo-cpt-kirk'...
+                    <pre><code>$ git clone git@github.com:grazin/repo-cpt-kirk.git</code></pre></div>
+                    <div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>Cloning into 'repo-cpt-kirk'...
 remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
 Receiving objects: 100% (4/4), done.
-
-cd repo-cpt-kirk
+</code></pre></div>
+<br />
+<div class="git"><pre><code>$ cd repo-cpt-kirk
 
 $ git status</code></pre>
                 </div>
@@ -74,7 +77,7 @@ $ git status</code></pre>
                 <div class="git">
                         <pre><code>$ git checkout -b feature-kirk-1</code></pre>
                     </div>
-                <p>Stwórz nowy plik o nazwie <span class="command">stepy.akermańskie.txt</span>
+                <p>Stwórz nowy plik o nazwie <span class="command">stepy.akermanskie.txt</span>
                     i wprowadź następującą treść:</p>
                 <p class="poem"><i>
                         Wpłynąłem na suchego przestwór oceanu,<br />
@@ -88,7 +91,7 @@ $ git status</code></pre>
                 <div class="git">
                     <pre><code>$ git add .
 
-$ git commit -m "cpt. Kirk stepy akermańskie"
+$ git commit -m "cpt. Kirk stepy akermanskie"
 
 $ git push -u origin feature-kirk-1</code></pre>
                 </div>
@@ -125,8 +128,10 @@ $ git push -u origin feature-spock-1</code></pre>
                 <p><img src="head_kirk.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas na code
                     review zmian Spocka.</p>
                 <div class="git">
-                    <pre><code>$ git fetch origin
-remote: Enumerating objects: 4, done.
+                    <pre><code>$ git fetch origin</code></pre></div>
+                    <div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
@@ -139,8 +144,10 @@ From github.com:grazin/repo2
                 <p><img src="head_spock.jpg" class="member" />Pobierz wszystkie zmiany ze zdalnego repozytorium. Czas na code
                     review zmian Kirka.</p>
                 <div class="git">
-                    <pre><code>$ git fetch origin
-remote: Enumerating objects: 4, done.
+                    <pre><code>$ git fetch origin</code></pre></div>
+                    <div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>remote: Enumerating objects: 4, done.
 remote: Counting objects: 100% (4/4), done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
@@ -156,13 +163,13 @@ From github.com:grazin/repo2
             <div class="team-member">
                 <p><img src="head_kirk.jpg" class="member" />Przejdź na brancz Spocka feature-spock-1. Przejrzyj zmiany w dowolnym GUI.</p>
                 <div class="git">
-                    <pre><code>$ checkout feature-spock-1</code></pre>
+                    <pre><code>$ git checkout feature-spock-1</code></pre>
                 </div>
             </div>
             <div class="team-member">
                 <p><img src="head_spock.jpg" class="member" />Przejdź na brancz Kirka feature-kirk-1. Przejrzyj zmiany w dowolnym GUI.</p>
                 <div class="git">
-                    <pre><code>$ checkout feature-kirk-1</code></pre>
+                    <pre><code>$ git checkout feature-kirk-1</code></pre>
                 </div>
             </div>
         </div>
@@ -170,17 +177,17 @@ From github.com:grazin/repo2
 
         <div class="team-work">
             <div class="team-member">
-                <p><img src="head_kirk.jpg" class="member" />Jeśli Spock zatwierdził twoje zmiany, wróc na brancz główny, żeby następnie
+                <p><img src="head_kirk.jpg" class="member" />Jeśli Spock zatwierdził twoje zmiany (ustnie wyraził zadowolenie z Twoich zmian), wróc na brancz główny, żeby następnie
                     swoje zmiany zmerdżować.</p>
                 <div class="git">
-                    <pre><code>$ checkout master</code></pre>
+                    <pre><code>$ git checkout master</code></pre>
                 </div>
             </div>
             <div class="team-member">
-                <p><img src="head_spock.jpg" class="member" />Jeśli Kirk zatwierdził twoje zmiany, wróc na brancz główny, żeby następnie 
+                <p><img src="head_spock.jpg" class="member" />Jeśli Kirk zatwierdził twoje zmiany (ustnie wyraził zadowolenie z Twoich zmian), wróc na brancz główny, żeby następnie 
                     swoje zmiany zmerdżować.</p>
                 <div class="git">
-                    <pre><code>$ checkout master</code></pre>
+                    <pre><code>$ git checkout master</code></pre>
                 </div>
             </div>
         </div>
@@ -189,20 +196,24 @@ From github.com:grazin/repo2
             <div class="team-member">
                 <p><img src="head_kirk.jpg" class="member" />Najpierw Kirk. Zmerdżuj swój brancz i pusznij.</p>
                 <div class="git">
-                    <pre><code>$ git merge feature-kirk-1
-Updating b3a6c5b..0c62f74
+                    <pre><code>$ git merge feature-kirk-1</code></pre></div>
+                    <div class="response">odpowiedź:</div>
+<div class="git with-response">
+                        <pre><code>Updating b3a6c5b..0c62f74
 Fast-forward
- "stepy.akerma\305\204skie.txt" | 4 ++++
+ "stepy.akermanskie.txt" | 4 ++++
  1 file changed, 4 insertions(+)
- create mode 100644 "stepy.akerma\305\204skie.txt"
-                            
-$ git push origin master</code></pre>
-                </div>
+            create mode 100644 "stepy.akermanskie.txt"</code></pre>
             </div>
+<br />                            
+ <div class="git">
+        <pre><code>$ git push origin master</code></pre>
+                </div>
             <div class="team-member">
 
             </div>
         </div>
+    </div>
         
         <div class="team-work">
             <div class="team-member">
@@ -219,7 +230,8 @@ $ git merge feature-spock-1</code></pre>
                 <p>Git poprosi o mesydż dodatkowego komita, który powstanie przy tym merdżu. Pomiń edycję klawiszami 
                         <span class="command">Shift+zz</span> lub <span class="command">:wq</span>. </p>
 
-                        <div class="git">
+                        <div class="response">vim:</div>
+<div class="git with-response">
                                 <pre><code><span class="message">Merge branch 'feature-spock-1' into master</span>
                 
 <span class="comment"># Please enter a commit message to explain why this merge is necessary,

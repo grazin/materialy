@@ -81,6 +81,7 @@ p.poem {
     border-radius: 5px;
     padding: 10px 5px;
 
+    clear: both;
     top: 0;
     box-sizing: border-box;
     width: 100%;

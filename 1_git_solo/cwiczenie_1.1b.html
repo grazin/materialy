@@ -27,19 +27,29 @@
         </div>
 
         <div class="piece">
+                <div class="howto">
+
             <div class="git">
-                <pre><code>$ git init
-Initialized empty Git repository in //Documents/Politechnika - Git/repo-testy/moj projekt/.git/</code></pre>
+                <pre><code>$ git init</code></pre>
+            </div>
+            <div class="response">odpowiedź:</div>
+            <div class="git with-response">
+                <pre><code>Initialized empty Git repository in //Documents/Politechnika - Git/repo-testy/moj projekt/.git/</code></pre>
 
             </div>
+        </div>
             <p>Zainicjuj repozytorium poleceniem <span class="command">git init</span>.</p>
 
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git status
-On branch master
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git status</code></pre>
+            </div>
+            <div class="response">odpowiedź:</div>
+            <div class="git with-response">
+                <pre><code>On branch master
 
 No commits yet
 
@@ -52,39 +62,55 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)</code></pre>
 
             </div>
+        </div>
             <p>Teraz sprawdź status swojego nowego repozytorium poleceniem <span class="command">git status</span>.</p>
 
         </div>
 
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git add .
             
-$ git status
-On branch master
+$ git status</code></pre>
+</div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+    <pre><code>On branch master
 Changes to be committed:
     (use "git reset HEAD &lt;file&gt;..." to unstage)
 
 <span class="changes-staged">new file:   readme.txt</span>
 <span class="changes-staged">new file:   src/siala baba mak.txt</span></code></pre>
             </div>
+        </div>
             <p>Dodaj zmiany do indeksu poleceniem <span class="command">add .</span> i sprawdź ponownie status.
             </p>
 
         </div>
 
         <div class="piece">
-                <div class="git">
-                    <pre><code>$ git commit -m "Start projektu"
-[master (root-commit) b3a6c5b] Start projektu
+                <div class="howto">
+                        <div class="git">
+                    <pre><code>$ git commit -m "Start projektu"</code></pre>
+                </div>
+                <div class="response">odpowiedź:</div>
+                <div class="git with-response">
+                    <pre><code>[master (root-commit) b3a6c5b] Start projektu
  2 files changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 readme.txt
- create mode 100644 src/siala baba mak.txt
-                           
-$ git status
-On branch master
+ create mode 100644 src/siala baba mak.txt</code></pre>
+</div>
+<br />
+<div class="git">
+    <pre><code>$ git status</code></pre>
+</div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+    <pre><code>On branch master
 nothing to commit, working tree clean</code></pre>
                 </div>
+            </div>
                 <p>Zakomituj teraz zmiany z dowolnym mesydżem. Sprawdź ponownie status.
                 </p>
     
@@ -108,18 +134,24 @@ nothing to commit, working tree clean</code></pre>
         </div>
 
         <div class="piece">
-            <div class="git">
+                <div class="howto">
+                        <div class="git">
                 <pre><code>$ git remote add origin git@github.com:grazin/repo2.git</code></pre>
 
             </div>
+        </div>
             <p>Wróć do git basha i zepnij swoje repozytorium z originem z GitHuba.</p>
 
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git push -u origin master
-Enumerating objects: 4, done.
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git push -u origin master</code></pre>
+            </div>
+            <div class="response">odpowiedź:</div>
+            <div class="git with-response">
+                <pre><code>Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 4 threads.
 Compressing objects: 100% (2/2), done.
@@ -131,14 +163,20 @@ remote:      https://github.com/grazin/repo2/pull/new/master
 remote:
 To github.com:grazin/repo2.git
     * [new branch]      master -> master
-Branch 'master' set up to track remote branch 'master' from 'origin'.
-
-$ git status
-On branch master
+Branch 'master' set up to track remote branch 'master' from 'origin'.</code></pre>
+</div>
+<br />
+<div class="git">
+    <pre><code>$ git status</code></pre>
+</div>
+<div class="response">odpowiedź:</div>
+<div class="git with-response">
+    <pre><code>On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean</code></pre>
             </div>
+        </div>
             <p>Teraz pusznij zmiany do origina (czyli do GitHuba).
                 Ponieważ to pierwszy komit na tym branczu, użyj przełącznika <span class="command">-u</span>. Następnie
                 znów odczytaj status.
@@ -146,14 +184,19 @@ nothing to commit, working tree clean</code></pre>
         </div>
 
         <div class="piece">
-            <div class="git">
-                <pre><code>$ git log
-<span class="message">commit 13bb5ed835a5832d752d9f00e74a4732f5a8382c</span> (HEAD -> master, origin/master)
+                <div class="howto">
+                        <div class="git">
+                <pre><code>$ git log</code></pre>
+            </div>
+            <div class="response">odpowiedź:</div>
+            <div class="git with-response">
+                <pre><code><span class="message">commit 13bb5ed835a5832d752d9f00e74a4732f5a8382c</span> (HEAD -> master, origin/master)
 Author: IZABELA SZCZEPANIK &lt;izabela.szczepanik@ing.com&gt;
 Date:   Tue Nov 27 14:28:32 2018 +0100
 
     Start projektu</code></pre>
             </div>
+        </div>
             <p>Na koniec podejrzyj historię. Użyj polecenia <span class="command">git log</span>, zobacz także log w
                 dowolnym GUI.
             </p>
